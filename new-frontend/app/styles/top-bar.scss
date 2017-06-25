@@ -1,0 +1,14 @@
+body > .ember-view > .container > nav.top-bar {
+  width: calc(100vw - 10em);
+  height: 2em;
+  background-color: #CCCCCC;
+  color: #333333;
+
+  > * { margin: 0 }
+
+  > input[type="search"] {
+    margin: .5ex;
+    font-size: 1em;
+    width: 50em;
+  }
+}

@@ -1,0 +1,14 @@
+{{top-bar}}
+<section class="home">
+  <header><h2>Home</h2></header>
+  <p>This is an example of an "old" app being gradually migrated into a "new" ember app.</p>
+  <p>When gradually migrating functionality from an old app to a new one, there would be screens
+  that haven't yet migrated to the new app. We are working on finding the best &amp; practical way
+  to lay out an SPA (ember) app coexisting with the old interface</p>
+  <p>We've defined two main goals:</p>
+  <ol>
+    <li>Have a new app with {{#link-to "new-screen"}}new screens{{/link-to}}, and load {{#link-to "old-screen"}}old screens{{/link-to}} within the new app.</li>
+    <li>Have elements in the new app interact with screens loaded from the old app i.e. the search</li>
+  </ol>
+</section>
+{{outlet}}

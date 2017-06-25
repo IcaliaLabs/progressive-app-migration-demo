@@ -1,0 +1,5 @@
+body > .ember-view > .container > iframe.old-app {
+  width: calc(100vw - 10em);
+  height: calc(100vh - 2em);
+  border: 0 none;
+}

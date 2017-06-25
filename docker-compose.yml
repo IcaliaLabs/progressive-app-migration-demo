@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+  old_app:
+    build:
+      context: ./old-app
+      dockerfile: dev.Dockerfile
+    image: icalialabs/progressive-migration-demo-old:development
+    entrypoint: /usr/src/app/bin/entrypoint
+    volumes:
+      - ./old-app:/usr/src/app
+      - ./entrypoint-rails:/usr/src/app/bin/entrypoint
+    stdin_open: true
+    tty: true
+    command: rails server -p 3000 -b 0.0.0.0
+    ports: [ "3000:3000" ]
+    environment:
+      RAILS_ENV: development
+      RACK_ENV: development
+      RAILS_LOG_TO_STDOUT: "true"
+
+  new_app:
+    build:
+      context: ./new-frontend
+      dockerfile: dev.Dockerfile
+    image: icalialabs/progressive-migration-demo-new:development
+    command: ember server --live-reload-port 35730
+    ports:
+      - 4200:4200
+      - 35730:35730
+    volumes:
+      - ./new-frontend:/usr/src/app
+      - ./entrypoint-ember:/usr/src/app/bin/entrypoint
+    entrypoint: /usr/src/app/bin/entrypoint
+    stdin_open: true
+    tty: true

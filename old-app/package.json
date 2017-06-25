@@ -1,0 +1,9 @@
+{
+  "name": "old-app",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "post-robot": "^7.0.2",
+    "urijs": "^1.18.10"
+  }
+}

@@ -1,0 +1,32 @@
+body {
+  margin: 0; padding: 0;
+  > .ember-view {
+    display: flex;
+    flex-wrap: wrap;
+
+    > nav.navigation-menu {
+      width: 10em;
+      height: 100vh;
+      background-color: #333;
+      color: #CCCCCC;
+
+      > ul {
+        list-style: none;
+        padding-left: 1em;
+
+        > li > a {
+          color: #CCCCCC;
+        }
+      }
+    }
+
+    > .container {
+      -webkit-flex: 1;
+              flex: 1;
+    }
+  }
+}
+
+
+@import "top-bar";
+@import "old-app";

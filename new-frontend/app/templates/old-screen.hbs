@@ -1,0 +1,4 @@
+{{top-bar terms=model.terms debounceTime=300 onSearchTermsChange=(action "doSearch") }}
+{{! We'll use the 'unbound' helper so changes in model.terms won't cause the iframe to reload... }}
+<iframe id="old-app-frame" class="old-app" src="http://localhost:3000/old-screen?terms={{unbound model.terms}}"></iframe>
+{{outlet}}

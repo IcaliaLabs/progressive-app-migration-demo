@@ -1,0 +1,14 @@
+<section class="old-app">
+  <header><h2>This is a screen from the old app.</h2></header>
+  <p>This should load inside an iframe within the new app</p>
+
+  <p>The current search terms are: <%= params[:terms] || '*' %></p>
+
+  <p>Other searches: Notice how whenever you click on one of these, the new app's search bar contents
+    will change:
+    <ul>
+    <li><%= link_to "uno dos tres", old_screen_path(terms: 'uno dos tres'), class: 'search-results' %></li>
+    <li><%= link_to "ah beh ceh", old_screen_path(terms: 'ah beh ceh'), class: 'search-results' %></li>
+    </ul>
+  </p>
+</section>

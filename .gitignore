@@ -1,0 +1,2 @@
+# Ignore bash/pry/etc history files:
+.*_hist*

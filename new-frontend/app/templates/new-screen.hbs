@@ -1,0 +1,10 @@
+{{top-bar debounceTime=300 onSearchTermsChange=(action "doSearch") }}
+<section class="new-screen">
+  <header><h2>This is a screen from the new application.</h2></header>
+  <p>This is a revamped area, written completely in ember</p>
+  <p>You might want to visit the {{#link-to "old-screen"}}Old Screen{{/link-to}} as an example of a
+  screen that lives in the old app living in the server</p>
+
+  <p>Your'e currently looking at '{{ model.displayedTerms }}'.</p>
+</section>
+{{outlet}}
